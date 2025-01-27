@@ -87,7 +87,7 @@ fun BusinessCard() {
                 .padding(16.dp)
         ) {
             ContactInfo(icon = R.drawable.phone, text = "+65 9878 1131")
-            ContactInfo(icon = R.drawable.social, text = "@OrienST8")
+            ContactInfo(icon = R.drawable.social, text = "@ OrienST8")
             ContactInfo(icon = R.drawable.email, text = "mervin.tan.2021@scis.smu.edu.sg")
         }
     }
@@ -95,18 +95,21 @@ fun BusinessCard() {
 @Composable
 fun ContactInfo(icon: Int, text: String) {
     Row(
-        modifier = Modifier.padding(vertical = 8.dp),
+        modifier = Modifier.padding(vertical = 16.dp),
         verticalAlignment = Alignment.Bottom,
 //        verticalArrangement = Arrangement.Bottom
     ) {
-        Image(
+        Image (
             painter = painterResource(id = icon), // Replace with your icon resource
             contentDescription = "Icon",
             modifier = Modifier
-                .size(24.dp)
-                .padding(end = 10.dp)
+                .size(40.dp)
+                .padding(end = 12.dp)
         )
-            Text (text = text, fontSize = 14.sp)
+        Text (
+                text = text,
+                fontSize = 20.sp
+            )
         }
     }
 
